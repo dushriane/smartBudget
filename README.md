@@ -1,21 +1,27 @@
 <<<<<<< HEAD
 # smartBudget
-Smart Budget and Saving for students
+Smart Budget and Saving for Students
 =======
-# untitled
-
-A new Flutter project.
-
 ## Getting Started
+📌 Smart Budget - Expense & Budget Tracker for Students
+A personal finance management app to help students track expenses, manage budgets, and save efficiently.
 
-This project is a starting point for a Flutter application.
+## 🚀 Overview
+Smart Budget is a Flutter-powered mobile application designed to assist students in managing their finances effortlessly. Features like expense tracking, budget alerts, savings goals, and insightful reports ensure that users stay in control of their spending habits.
+This project leverages Flutter (Dart) with Riverpod for state management and Hive for offline storage, ensuring a seamless and efficient experience.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Tech Stack
+Frontend: Flutter (Dart)
+State Management: Riverpod
+Storage: Hive (SQLite as an alternative)
+Backend (Optional): Spring Boot / Node.js (for cloud sync, if implemented)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🏗 Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/yourusername/smart-budget-app.git
+cd smart-budget-app
+2️⃣ Install Dependencies
+flutter pub get
+3️⃣ Run the App
+flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> 543017e (initial commit with a bunch of errors)
