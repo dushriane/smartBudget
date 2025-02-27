@@ -1,34 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'models/boxes.dart';
-import 'services/notification_services.dart';
 import 'screens/home_screen.dart'; // Import HomeScreen
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize Hive and all necessary boxes
   await Hive.initFlutter();
-  await initHiveBoxes(); // Ensure your Hive boxes are initialized
+  await initHiveBoxes(); // Initialize Hive storage
 
-  // Initialize notification service
-  await NotificationService().init();
-
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: ExpenseTrackerApp()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ExpenseTrackerApp extends StatelessWidget {
+  const ExpenseTrackerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Student Smart Expense and Budgeting App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomeScreen(), // Navigate to HomeScreen
+      title: 'Smart Expense Tracker',
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
+      home: const HomeScreen(),
     );
   }
 }
